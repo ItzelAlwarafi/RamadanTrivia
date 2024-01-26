@@ -1,0 +1,87 @@
+html {
+    background-color:#15307c ;
+    background-size: cover;
+    height: 100%;
+    overflow: hidden;
+  }
+  header{
+    display:flex;
+    justify-content: space-between;
+  }
+  #logo{
+    width: 600px;
+    height: 400px;
+    margin-left: 30%;
+    
+  }
+
+  #scoreTimerBox{
+  font-family: Helvetica ;
+  font-weight: bolder;
+  color: white;
+  font-size: 50px;
+  display:flex;
+  justify-content:flex-end;
+  margin-right: 2%;
+  opacity: 0;
+  }
+  #timer{
+    margin-right: 6%;
+  }
+  #startGamebtn{
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 25px;
+    border: .3rem;
+    border-style: outset;
+    color: #15307c;
+    margin-left: 45%;
+    
+  }
+  #playBtn{
+    width: 200px;
+    height: 50px;
+    background-color: white;
+    font-family: Helvetica;
+    font-weight: bold;
+    font-size: 25px;
+    border: .3rem;
+    border-style: outset;
+    color: #15307c;
+    margin-left: 45%;
+  opacity: 0;
+    
+  }
+  #startGamebtn:hover{
+    background-color: #15307c;
+    color: white;
+    border: none;
+  }
+  #welcomeMessage{
+    float: left;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: center;
+	width: 100%;
+    flex-direction: column;
+    color: white;
+    font-family: Helvetica;
+    font-size: 40px;
+    font-weight: bold;
+  }
+  #instructions{
+    float: left;
+	padding-bottom: 10px;
+	padding-top: 10px;
+	text-align: center;
+	width: 100%;
+    flex-direction: column;
+    color: white;
+    font-family: Helvetica;
+    font-size:25px;
+    font-weight: bold;
+    opacity: 0;
+  }
