@@ -25,7 +25,7 @@ html {
   margin-right: 2%;
   opacity: 0;
   }
-  #timer{
+  #attemps{
     margin-right: 6%;
   }
              
@@ -144,8 +144,46 @@ html {
         color: #fff;
         text-decoration: none;
       }
-     
-   
+      #restartBtn  {
+        display: none;
+        background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
+        margin: 10px;
+        margin-left: 42%;
+        padding: 15px 45px;
+        text-align: center;
+        text-transform: uppercase;
+        transition: 0.5s;
+        background-size: 200% auto;
+        color: #15307c;            
+        box-shadow: 0 0 20px #eee;
+        border-radius: 10px;
+        justify-content: space-evenly;
+        font-family: Helvetica;
+        font-weight: bold;
+        font-size: 25px;
+      } 
+      #restartBtn:hover{
+        background-position: right center; /* change the direction of the change here */
+        color: #fff;
+        text-decoration: none;
+      }
+      #tryagain {
+        float: left;
+        padding-bottom: 10px;
+        padding-top: 10px;
+        text-align: center;
+        width: 100%;
+        flex-direction: column;
+        color: rgb(196, 190, 12);
+        font-family: Helvetica;
+        font-size: 70px;
+        font-weight: bold;
+        text-shadow: rgb(255, 255, 255) 1px 0 5px;
+        
+        
+        
+        
+      }
   
 
  

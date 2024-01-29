@@ -10,7 +10,7 @@
 <header>
  <img id="logo" src="RamadanTriviaLogo.png"/>
  <div id="scoreTimerBox">
- <p id="timer">00:00</p>
+ <p id="attemps">Attemps left:00</p>
  <p id="score">Score:00</p></div>
 
 </header>
@@ -21,7 +21,7 @@
     </div>
     <input id ="startGamebtn" type="button" onclick="changePage() " value="Start Game"> </input> 
     <div id="instructions">
-        <p> Instrunctions:</p>
+        <p> Instructions:</p>
         <p>You'll have to 5 question,</p>
         <p>Answer each question before the time runs off</p>  
     </div>
@@ -31,7 +31,7 @@
   
     <input id="playBtn"  type="button" onclick=" startGame()" value="Play Game"> </input> 
    <div id="tryagain"></div>
-
+   <input id="restartBtn"  type="button" onclick=" resetGame ()" value="Play Again"> </input> 
 
     
 </body>
