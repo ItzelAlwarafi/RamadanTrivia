@@ -12,7 +12,8 @@ html {
     width: 600px;
     height: 400px;
     margin-left: 30%;
-    
+    display: center;
+    position: relative;
   }
 
   #scoreTimerBox{
@@ -103,6 +104,7 @@ html {
     opacity: 0;
   }
   #questionContainer{
+    margin-top: 5%;
     float: left;
 	padding-bottom: 10px;
 	padding-top: 10px;
@@ -111,12 +113,24 @@ html {
     flex-direction: column;
     color: white;
     font-family: Helvetica;
-    font-size: 40px;
+    font-size: 30px;
     font-weight: bold;
+    box-shadow: 0 0 20px #eee;
+    display: none;
+    border-radius: 20px;
+    width: 500px;
+    height: 300px;
+
   }
   #optionsContainer{
- width: 100%;
+
  margin-left: 5%;
+ display: inline-block;
+ align-items: center;
+ width: 500px;
+ height: 300px;
+ position: absolute;
+ margin-top: 25%;
 
   }
   #optionsBtn{
@@ -185,5 +199,4 @@ html {
         
       }
   
-
- 
+    

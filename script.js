@@ -11,6 +11,7 @@ const questionContainer = document.getElementById("questionContainer")
 const optionsContainer = document.getElementById("optionsContainer")
 const tryagain = document.getElementById("tryagain")
 const restBtn =document.getElementById('restartBtn')
+let currentQuestion
 
 // Trivia questions
 const questions = [
@@ -25,7 +26,6 @@ const questions = [
 
 
 let totalQuestions = questions.length
-let answerQuestions = 0
 let currentQuestionIndex =0
 let score = 0
 let attempts = 3
@@ -43,32 +43,36 @@ function startGame(){
 function displayQuestion(i) {
     restBtn.style.display="none"
     optionsContainer.style.display ="inline"
-    const currentQuestion = questions[currentQuestionIndex]
+    questionContainer.style.display = "inline"
+    currentQuestion = getRandomQuestion() //questions[currentQuestionIndex]
     questionContainer.innerHTML = `<p>${currentQuestion.question}</p>`
     optionsContainer.innerHTML = currentQuestion.options.map(option => `<button id ='optionsBtn'onclick="checkAnswer('${option}')">${option}</button>`).join('')
+    
     document.getElementById('score').innerText ='Score:0' + score
      document.getElementById('attemps').innerText = `Attempt left: ${attempts}`
+    
      
-    
-
-
 }
-
+function getRandomQuestion(){
+    let randomIndex = Math.floor(Math.random() * questions.length)
+    return questions[randomIndex]
+}
 function checkAnswer(playerAnswer) {
-    const currentQuestion = questions[currentQuestionIndex];
     
+    console.log(currentQuestion)
+    console.log(playerAnswer)
     if (playerAnswer === currentQuestion.correctAnswer) {
         score++
-        answerQuestions ++
-        nextQuestion()
         
-         
+        nextQuestion()
+      //answerQuestions ++
     } else if (playerAnswer !== currentQuestion.correctAnswer && attempts > 0) {
         attempts --
         tryagain.innerHTML ="<h2>TRY AGAIN!</h2>"
         setTimeout(function(){
-            document.getElementById("tryagain").innerHTML = '';
-        }, 2000);
+            document.getElementById("tryagain").innerHTML = ''
+        }, 2000)
+    
 
     }else {
 
@@ -77,10 +81,11 @@ function checkAnswer(playerAnswer) {
         tryagain.style.display = 'none'
         restBtn.style.display="inline-flex"
        
-
     }
+    
 
 }
+
 
 
   // Function to move to the next question
@@ -126,3 +131,5 @@ function changePage(){
     
    
 }
+
+
