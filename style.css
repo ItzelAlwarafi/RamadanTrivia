@@ -1,202 +1,205 @@
 html {
-    background-color:#15307c ;
-    background-size: cover;
-    height: 100%;
-    overflow: hidden;
-  }
-  header{
-    display:flex;
-    justify-content: space-between;
-  }
-  #logo{
-    width: 600px;
-    height: 400px;
-    margin-left: 30%;
-    display: center;
-    position: relative;
-  }
-
-  #scoreTimerBox{
-  font-family: Helvetica ;
-  font-weight: bolder;
-  color: white;
-  font-size: 30px;
+  background-color:#15307c ;
+  background-size: cover;
+  height: 100%;
+  overflow: hidden;
+}
+header{
   display:flex;
-  justify-content:flex-end;
-  margin-right: 2%;
-  opacity: 0;
-  }
-  #attemps{
-    margin-right: 6%;
-  }
-             
- #startGamebtn {
-        background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
-        margin: 10px;
-        padding: 15px 45px;
-        text-align: center;
-        text-transform: uppercase;
-        transition: 0.5s;
-        background-size: 200% auto;
-        color: #15307c;            
-        box-shadow: 0 0 20px #eee;
-        border-radius: 10px;
-        display: block;
-        font-family: Helvetica;
-        font-weight: bold;
-        font-size: 25px;
-        margin-left: 45%;
-      }
+  justify-content: space-between;
+}
+#logo{
+  width: 600px;
+  height: 400px;
+  margin-left: 30%;
+  display: center;
+  position: relative;
+}
 
-      #startGamebtn:hover {
-        background-position: right center; /* change the direction of the change here */
-        color: #fff;
-        text-decoration: none;
-      }
-     
-  #playBtn{
-    background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
-    margin: 10px;
-    padding: 15px 45px;
-    text-align: center;
-    text-transform: uppercase;
-    transition: 0.5s;
-    background-size: 200% auto;
-    color: #15307c;            
-    box-shadow: 0 0 20px #eee;
-    border-radius: 10px;
-    display: block;
-    font-family: Helvetica;
-    font-weight: bold;
-    font-size: 25px;
-    margin-left: 43%;
-  opacity: 0;
-    
-  }
-        #playBtn:hover{
-    background-position: right center; /* change the direction of the change here */
-    color: #fff;
-    text-decoration: none;
-        }
-  #welcomeMessage{
-    float: left;
-	padding-bottom: 10px;
-	padding-top: 10px;
-	text-align: center;
-	width: 100%;
-    flex-direction: column;
-    color: white;
-    font-family: Helvetica;
-    font-size: 40px;
-    font-weight: bold;
-  }
-  #instructions{
-    float: left;
-	padding-bottom: 10px;
-	padding-top: 10px;
-	text-align: center;
-	width: 100%;
-    flex-direction: column;
-    color: white;
-    font-family: Helvetica;
-    font-size:25px;
-    font-weight: bold;
-    opacity: 0;
-  }
-  #questionContainer{
-    margin-top: 5%;
-    float: left;
-	padding-bottom: 10px;
-	padding-top: 10px;
-	text-align: center;
-	width: 100%;
-    flex-direction: column;
-    color: white;
-    font-family: Helvetica;
-    font-size: 30px;
-    font-weight: bold;
-    box-shadow: 0 0 20px #eee;
-    display: none;
-    border-radius: 20px;
-    width: 500px;
-    height: 300px;
+#scoreTimerBox{
+font-family: Helvetica ;
+font-weight: bolder;
+color: white;
+font-size: 30px;
+display:flex;
+justify-content:flex-end;
+margin-right: 2%;
+opacity: 0;
+}
+#attemps{
+  margin-right: 6%;
+}
+           
+#startGamebtn {
+      background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
+      margin: 10px;
+      padding: 15px 45px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: #15307c;            
+      box-shadow: 0 0 20px #eee;
+      border-radius: 10px;
+      display: block;
+      font-family: Helvetica;
+      font-weight: bold;
+      font-size: 25px;
+      margin-left: 45%;
+    }
 
-  }
-  #optionsContainer{
-
- margin-left: 5%;
- display: inline-block;
- align-items: center;
- width: 500px;
- height: 300px;
- position: absolute;
- margin-top: 25%;
-
-  }
-  #optionsBtn{
-             
-        background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%);
-        margin: 10px;
-        margin-left: 5%;
-        padding: 15px 45px;
-        text-align: center;
-        text-transform: uppercase;
-        transition: 0.5s;
-        background-size: 200% auto;
-        color: white;            
-        box-shadow: 0 0 20px #eee;
-        border-radius: 10px;
-        display:inline-flex;
-        justify-content: space-evenly;
-        font-family: Helvetica;
-        font-weight: bold;
-        font-size: 25px;
-  }
-
-  #optionsBtn:hover {
-        background-position: right center; /* change the direction of the change here */
-        color: #fff;
-        text-decoration: none;
-      }
-      #restartBtn  {
-        display: none;
-        background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
-        margin: 10px;
-        margin-left: 42%;
-        padding: 15px 45px;
-        text-align: center;
-        text-transform: uppercase;
-        transition: 0.5s;
-        background-size: 200% auto;
-        color: #15307c;            
-        box-shadow: 0 0 20px #eee;
-        border-radius: 10px;
-        justify-content: space-evenly;
-        font-family: Helvetica;
-        font-weight: bold;
-        font-size: 25px;
-      } 
-      #restartBtn:hover{
-        background-position: right center; /* change the direction of the change here */
-        color: #fff;
-        text-decoration: none;
-      }
-      #tryagain {
-        float: left;
-        padding-bottom: 10px;
-        padding-top: 10px;
-        text-align: center;
-        width: 100%;
-        flex-direction: column;
-        color: rgb(196, 190, 12);
-        font-family: Helvetica;
-        font-size: 70px;
-        font-weight: bold;
-        text-shadow: rgb(255, 255, 255) 1px 0 5px;
-        
-        
-        
-        
-      }
+    #startGamebtn:hover {
+      background-position: right center; /* change the direction of the change here */
+      color: #fff;
+      text-decoration: none;
+    }
+   
+#playBtn{
+  background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
+  margin: 10px;
+  padding: 15px 45px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: #15307c;            
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+  font-family: Helvetica;
+  font-weight: bold;
+  font-size: 25px;
+  margin-left: 43%;
+opacity: 0;
   
-    
+}
+      #playBtn:hover{
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+      }
+#welcomeMessage{
+  float: left;
+padding-bottom: 10px;
+padding-top: 10px;
+text-align: center;
+width: 100%;
+  flex-direction: column;
+  color: white;
+  font-family: Helvetica;
+  font-size: 40px;
+  font-weight: bold;
+}
+#instructions{
+  float: left;
+padding-bottom: 10px;
+padding-top: 10px;
+text-align: center;
+width: 100%;
+  flex-direction: column;
+  color: white;
+  font-family: Helvetica;
+  font-size:25px;
+  font-weight: bold;
+  opacity: 0;
+}
+#questionContainer{
+  margin-top: 5%;
+  float: left;
+padding-bottom: 10px;
+padding-top: 10px;
+text-align: center;
+width: 100%;
+  flex-direction: column;
+  color: white;
+  font-family: Helvetica;
+  font-size: 30px;
+  font-weight: bold;
+  box-shadow: 0 0 20px #eee;
+  display: none;
+  border-radius: 20px;
+  width: 500px;
+  height: 300px;
+  margin-left: 5%;
+
+}
+#optionsContainer{
+
+margin-left: 5%;
+display: inline-block;
+align-items: center;
+width: 500px;
+height: 300px;
+position: absolute;
+margin-top: 5%;
+
+}
+#optionsBtn{
+           
+      background-image: linear-gradient(to right, #1A2980 0%, #26D0CE  51%, #1A2980  100%);
+      margin: 10px;
+      margin-left: 5%;
+      padding: 15px 45px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: white;            
+      box-shadow: 0 0 20px #eee;
+      border-radius: 10px;
+      display:inline-flex;
+      justify-content: space-evenly;
+      font-family: Helvetica;
+      font-weight: bold;
+      font-size: 25px;
+}
+
+#optionsBtn:hover {
+      background-position: right center; /* change the direction of the change here */
+      color: #fff;
+      text-decoration: none;
+    }
+    #restartBtn  {
+      display: none;
+      background-image: linear-gradient(to right, #ECE9E6 0%, #FFFFFF  51%, #ECE9E6  100%);
+      margin: 10px;
+      margin-top: 10%;
+      margin-left: 10%;
+      padding: 15px 45px;
+      text-align: center;
+      text-transform: uppercase;
+      transition: 0.5s;
+      background-size: 200% auto;
+      color: #15307c;            
+      box-shadow: 0 0 20px #eee;
+      border-radius: 10px;
+      justify-content: space-evenly;
+      font-family: Helvetica;
+      font-weight: bold;
+      font-size: 25px;
+    } 
+    #restartBtn:hover{
+      background-position: right center; /* change the direction of the change here */
+      color: #fff;
+      text-decoration: none;
+      
+    }
+    #tryagain {
+      float: left;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      text-align: center;
+      width: 100%;
+      flex-direction: column;
+      color: rgb(196, 190, 12);
+      font-family: Helvetica;
+      font-size: 70px;
+      font-weight: bold;
+      text-shadow: rgb(255, 255, 255) 1px 0 5px;
+      
+      
+      
+      
+    }
+
+  

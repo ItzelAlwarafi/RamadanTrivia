@@ -22,6 +22,10 @@ const questions = [
     { question: "How many pillars of Islam does fasting during Ramadan constitute?", options: ["2","3","4","5"], correctAnswer: "4"},
     { question:"What is the special night in Ramadan when the Quran was first revealed?", options:["Laylat al-Qadr","Eid al-Fitr","Laylat al-Miraj","Ashura"], correctAnswer:"Laylat al-Qadr"},
     {question: "What is the charity given by Muslims during Ramadan called?",options:["Sadaqah","Zakat","Khums","Fitrah"], correctAnswer:"Zakat"},
+    {question: "Why Is Ramadan Singled-Out as a Month of Special Worship?",options:["Food","Gifts","Fasting","Sadaqah"],correctAnswer : "Fasting"},
+    {question: "How many times the word Ramadan was mentioned in the Holy Quran?", options:["1","5","3","0"],correctAnswer:"1"},
+    {question: "What is the extra prayer in Ramadan? ", option: ["Tahajjud","Istikhara","Duaa","Taraweh"], correctAnswer :"Taraweh"},
+    
 ]
 
 
@@ -44,12 +48,10 @@ function displayQuestion(i) {
     restBtn.style.display="none"
     optionsContainer.style.display ="inline"
     questionContainer.style.display = "inline"
-    currentQuestion = getRandomQuestion() //questions[currentQuestionIndex]
+    currentQuestion = getRandomQuestion() 
     questionContainer.innerHTML = `<p>${currentQuestion.question}</p>`
     optionsContainer.innerHTML = currentQuestion.options.map(option => `<button id ='optionsBtn'onclick="checkAnswer('${option}')">${option}</button>`).join('')
     
-    document.getElementById('score').innerText ='Score:0' + score
-     document.getElementById('attemps').innerText = `Attempt left: ${attempts}`
     
      
 }
@@ -63,7 +65,10 @@ function checkAnswer(playerAnswer) {
     console.log(playerAnswer)
     if (playerAnswer === currentQuestion.correctAnswer) {
         score++
-        
+
+        document.getElementById('score').innerText ='Score:0' + score
+        document.getElementById('attemps').innerText = `Attempt left: ${attempts}`
+       
         nextQuestion()
       //answerQuestions ++
     } else if (playerAnswer !== currentQuestion.correctAnswer && attempts > 0) {
@@ -75,14 +80,14 @@ function checkAnswer(playerAnswer) {
     
 
     }else {
-
+        restBtn.style.display="inline-flex"
         questionContainer.innerHTML = "<h2>Game Over!</h2>" + `<p>Your final score is: ${score}</p>`
         optionsContainer.style.display = 'none'
         tryagain.style.display = 'none'
-        restBtn.style.display="inline-flex"
+       
        
     }
-    
+ 
 
 }
 
@@ -104,7 +109,7 @@ function checkAnswer(playerAnswer) {
 }
   // Function to display the final score
   function displayFinalScore() {
-    optionsContainer.style.opacity='0'
+    optionsContainer.style.display = 'none'
     questionContainer.innerHTML = "<h2>Congrats, !</h2>" + `<p>Your final score is: ${score}</p>`
     restBtn.style.display="inline-flex"
 
