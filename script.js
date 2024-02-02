@@ -46,7 +46,7 @@ function startGame(){
     }
 
 //funtion to show questions 
-function displayQuestion(i) {
+function displayQuestion() {
     restBtn.style.display="none"
     optionsContainer.style.display ="inline"
     questionContainer.style.display = "inline"
@@ -140,3 +140,4 @@ function endGame(){
     
 }
 
+x
