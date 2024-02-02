@@ -11,6 +11,7 @@ const questionContainer = document.getElementById("questionContainer")
 const optionsContainer = document.getElementById("optionsContainer")
 const tryagain = document.getElementById("tryagain")
 const restBtn =document.getElementById('restartBtn')
+const endGameBtn =document.getElementById('endGameBtn')
 let currentQuestion
 
 // Trivia questions
@@ -33,6 +34,7 @@ let totalQuestions = questions.length
 let currentQuestionIndex =0
 let score = 0
 let attempts = 3
+let answerQuestions = 0
 
 function startGame(){
     instructions.style.display ="none"
@@ -51,7 +53,7 @@ function displayQuestion(i) {
     currentQuestion = getRandomQuestion() 
     questionContainer.innerHTML = `<p>${currentQuestion.question}</p>`
     optionsContainer.innerHTML = currentQuestion.options.map(option => `<button id ='optionsBtn'onclick="checkAnswer('${option}')">${option}</button>`).join('')
-    
+    endGameBtn.style.opacity ="1"
     
      
 }
@@ -70,7 +72,7 @@ function checkAnswer(playerAnswer) {
         document.getElementById('attemps').innerText = `Attempt left: ${attempts}`
        
         nextQuestion()
-      //answerQuestions ++
+     answerQuestions ++
     } else if (playerAnswer !== currentQuestion.correctAnswer && attempts > 0) {
         attempts --
         tryagain.innerHTML ="<h2>TRY AGAIN!</h2>"
@@ -110,17 +112,13 @@ function checkAnswer(playerAnswer) {
   // Function to display the final score
   function displayFinalScore() {
     optionsContainer.style.display = 'none'
-    questionContainer.innerHTML = "<h2>Congrats, !</h2>" + `<p>Your final score is: ${score}</p>`
+    questionContainer.innerHTML = `<h2> You answer ${answerQuestions} out of ${totalQuestions} </h2>` + `<p>Your final score is: ${score}</p>`
     restBtn.style.display="inline-flex"
 
 }
 
 
 function resetGame (){
-// totalQuestions = questions.length
-// answerQuestions = 0
-// score = 0
-// attempts = 3
 window.location.reload();
 }
 function changePage(){
@@ -137,4 +135,8 @@ function changePage(){
    
 }
 
+function endGame(){
+    displayFinalScore()
+    
+}
 

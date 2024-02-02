@@ -13,7 +13,7 @@
         Earn points for each correct answer.
         Your total score will be displayed at the end of the game.
     -Challenge Yourself:
-	    Try to answer as many questions and uncover the pizzle.
+	    Try to answer as many questions 
 	Share your score with friends and challenge them to beat it.
 
 #Features
@@ -21,9 +21,6 @@
 -Diverse Questions:
     The game includes a variety of questions covering different aspects of Ramadan, including its history, traditions, and significance.
 
-
--Multiple Difficulty Levels:
-    Questions are categorized into different difficulty levels, allowing players to choose their preferred level of challenge.
 
 -Educational Insights:
     After answering each question, players receive informative explanations, providing additional insights into the topic.
