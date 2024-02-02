@@ -140,4 +140,3 @@ function endGame(){
     
 }
 
-x

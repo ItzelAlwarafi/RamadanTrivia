@@ -40,3 +40,7 @@
 
 
 Enjoy playing the Ramadan Trivia Game! Ramadan Mubarak! 🌙✨
+
+Sources:
+https://www.w3schools.com/jsref/event_onkeyup.asp 
+https://stackoverflow.com/questions/11813806/javascript-get-a-functions-variables-value-within-another-function
